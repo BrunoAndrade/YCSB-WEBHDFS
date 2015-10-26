@@ -94,7 +94,7 @@ public class HdfsClient extends DB {
         }
     }
 
-    // Este scan percorre todo o filesystem, desde a base_folder
+    // This scan method, transverse all the filesystem, since the base_folder
     @Override
     public int scan(String table, String startkey, int recordcount, Set<String> fields, Vector<HashMap<String, ByteIterator>> result) {
         return list(filesystem_base_folder, true) ? Ok : Error;
@@ -135,7 +135,7 @@ public class HdfsClient extends DB {
 
         String dest =filesystem_base_folder+"/"+key;
 
-        // recursivo se a key for path.
+        // This delete invocation is recursive if the key is a directory
         boolean result = conn.delete(dest, "true");
 
         if(result)
