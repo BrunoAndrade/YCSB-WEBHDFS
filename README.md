@@ -1,3 +1,3 @@
 # YCSB-WEBHDFS
 
-Este binding foi criado apenas com propósitos académicos.
+This YCSB binding was created to evaluate the webhdfs performance when reading an arbitry set of small files.
